@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    printf("Shubham kumar\n");
+    int x,y,a;
+    printf("Enter a length:");
+    scanf("%d",&x);
+    printf("Enter a width:");
+    scanf("%d",&y);
+    a=x*y;
+    printf("Area of rectangle is: %d",a);
+    return 0;
+}
