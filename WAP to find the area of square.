@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+    printf("Shubham kumar\n");
+    int x,a;
+    printf("Enter a side:");
+    scanf("%d",&x);
+    a=x*x;
+    printf("Area of square is: %d",a);
+    return 0;
+}
