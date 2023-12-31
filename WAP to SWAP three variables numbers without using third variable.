@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    printf("Shubham kumar\n");
+    int x,y,z;
+    printf("Enter your first number x:");
+    scanf("%d",&x);
+    printf("Enter your first number y:");
+    scanf("%d",&y);
+    printf("Enter your third number z:");
+    scanf("%d",&z);
+    z=x+y+z;
+    x=z-y-x;
+    y=z-y-x;
+    z=z-y-x;
+    printf("After swaping three numbers x = %d and y = %d and z = %d",x,y,z);
+    return 0;
+}
