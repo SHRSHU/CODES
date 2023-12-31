@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    printf("Shubham kumar\n");
+    float x,y,z;
+    printf("Enter you first number:");
+    scanf("%f",&x);
+    printf("Enter your secound number:");
+    scanf("%f",&y);
+    z=x*y;
+    printf("the float value of %f and %f is %0.2f",x,y,z);
+    return 0;
+}
