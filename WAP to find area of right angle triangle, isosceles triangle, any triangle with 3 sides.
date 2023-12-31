@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    printf("Shubham Kumar");
+    int x,y,a;
+    printf("Enter base :");
+    scanf("%d",&x);
+    printf("Enter height :");
+    scanf("%d",&y);
+    a=x*y/2;
+    printf("area of right angle is %d ",a);
+    
+
+    return 0;
+}
