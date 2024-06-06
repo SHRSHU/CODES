@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void inser_sort(int arr[],int n)
+{
+    int key,j;
+    for(int i=1;i<n;i++){
+        key=arr[i];
+        j=i-1;
+        while(j >= 0 && arr[j]>key){
+            arr[j+1] =arr[j];
+            j=j-1;
+        }
+        arr[j+1]=key;
+    }
+    
+}
+void print_array(int arr[],int n)
+{
+    for(int i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
+    printf("\n");
+}
+int main(){
+    int n;
+    printf("enter a number of elemnets:");
+    scanf("%d",&n);
+    
+    int *arr = (int *)malloc(n * sizeof(int));
+    
+    printf("enter your elemets:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("entered  elements:");
+    print_array(arr,n);
+    
+    inser_sort(arr,n);
+    printf("soretd array:");
+    print_array(arr,n);
+    
+    
+    free(arr);
+    return 0;
+    
+}
