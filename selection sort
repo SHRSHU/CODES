@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void sel_sort(int arr[],int n)
+{
+    int mid_index;
+    for(int i=0;i<n-1;i++){
+        mid_index=i;
+        for(int j=i+1;j<n;j++){
+            if(arr[j]<arr[mid_index]){
+                mid_index=j;
+            }
+        }
+        int temp=arr[mid_index];
+        arr[mid_index]=arr[i];
+        arr[i]=temp;
+    }
+}
+void print_array(int arr[],int n)
+{
+    for(int i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
+    printf("\n");
+}
+int main(){
+    int n;
+    printf("enter a number of elemnets:");
+    scanf("%d",&n);
+    
+    int *arr = (int *)malloc(n * sizeof(int));
+    
+    printf("enter your elemets:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("entered  elements:");
+    print_array(arr,n);
+    
+    sel_sort(arr,n);
+    printf("soretd array:");
+    print_array(arr,n);
+    
+    
+    free(arr);
+    return 0;
+    
+}
